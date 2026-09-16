@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uber Eats優惠 - 限時外送優惠券</title>
+
+<meta property="og:title" content="Uber Eats | 優惠">
+<meta property="og:description" content="限時外送優惠券・滿 $99 最高折 $30，滿 $199 最高折 $99，9月30日前領取使用！">
+<meta property="og:image" content="https://krakervonnie-copuon.github.io/uber-youhui/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://krakervonnie-copuon.github.io/uber-youhui/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Uber Eats 優惠">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Uber Eats | 優惠">
+<meta name="twitter:description" content="限時外送優惠券・滿 $99 折 $30，滿 $199 折 $99">
+<meta name="twitter:image" content="https://krakervonnie-copuon.github.io/uber-youhui/og-image.jpg">
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/732/732217.png">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  * { font-family: 'Noto Sans TC', sans-serif; -webkit-font-smoothing: antialiased; }
+  body { background: #FFFBF0; }
+  .coupon-card { box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(12px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .modal-animate { animation: modalIn 0.25s cubic-bezier(0.16,1,0.3,1); }
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+<!-- Main Content -->
+<main class="flex-1 px-4 py-12 md:py-20">
+  <div class="max-w-[720px] mx-auto">
+    
+    <!-- Hero Title -->
+    <div class="text-center mb-10">
+      <h1 class="text-[32px] md:text-[44px] font-black tracking-tight leading-tight text-[#111]">限時外送優惠券</h1>
+      <p class="mt-3 text-[15px] text-[#666] tracking-wide">9月30日前使用・滿額即折・數量有限</p>
+    </div>
+
+    <!-- Coupon 1 -->
+    <div class="coupon-card bg-white rounded-[20px] md:rounded-[24px] p-5 md:p-7 flex items-center justify-between gap-4 mb-5 border border-black/[0.06]">
+      <div class="flex items-start gap-4 flex-1">
+        <div class="w-12 h-12 rounded-full bg-[#E8F5E9] flex items-center justify-center shrink-0 mt-0.5">
+          <!-- Tag icon -->
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20.5 12.5L12.5 20.5C12.1 20.9 11.5 21.1 11 21.1C10.4 21.1 9.8 20.9 9.4 20.5L3.5 14.6C3.1 14.2 2.9 13.6 2.9 13C2.9 12.4 3.1 11.8 3.5 11.4L11.4 3.5C11.8 3.1 12.4 2.9 13 2.9C13.6 2.9 14.2 3.1 14.6 3.5L20.5 9.4C21.3 10.2 21.3 11.7 20.5 12.5Z" fill="#4CAF50" stroke="#4CAF50" stroke-width="1.5"/><circle cx="10" cy="10" r="2" fill="white"/></svg>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-[22px] md:text-[24px] font-black text-[#111] leading-none">70% 折扣優惠</span>
+            <span class="text-[13px] font-medium text-[#555] bg-[#F5F5F5] px-2.5 py-1 rounded-full">滿 $99</span>
+          </div>
+          <p class="mt-2 text-[13px] md:text-[14px] text-[#666] leading-[1.6]">請於 9月30日前使用・最高可折抵 $30</p>
+        </div>
+      </div>
+      <button onclick="openModal()" class="claim-btn shrink-0 bg-[#F5F5F5] hover:bg-[#111] hover:text-white transition-all duration-200 text-[#111] font-bold text-[15px] px-6 md:px-8 py-3 rounded-full min-w-[88px] whitespace-nowrap" style="writing-mode: horizontal-tb; white-space: nowrap;">
+        領取
+      </button>
+    </div>
+
+    <!-- Coupon 2 -->
+    <div class="coupon-card bg-white rounded-[20px] md:rounded-[24px] p-5 md:p-7 flex items-center justify-between gap-4 mb-10 border border-black/[0.06]">
+      <div class="flex items-start gap-4 flex-1">
+        <div class="w-12 h-12 rounded-full bg-[#E8F5E9] flex items-center justify-center shrink-0 mt-0.5">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M20.5 12.5L12.5 20.5C12.1 20.9 11.5 21.1 11 21.1C10.4 21.1 9.8 20.9 9.4 20.5L3.5 14.6C3.1 14.2 2.9 13.6 2.9 13C2.9 12.4 3.1 11.8 3.5 11.4L11.4 3.5C11.8 3.1 12.4 2.9 13 2.9C13.6 2.9 14.2 3.1 14.6 3.5L20.5 9.4C21.3 10.2 21.3 11.7 20.5 12.5Z" fill="#4CAF50" stroke="#4CAF50" stroke-width="1.5"/><circle cx="10" cy="10" r="2" fill="white"/></svg>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-[22px] md:text-[24px] font-black text-[#111] leading-none">50% 折扣優惠</span>
+            <span class="text-[13px] font-medium text-[#555] bg-[#F5F5F5] px-2.5 py-1 rounded-full">滿 $199</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" class="text-[#999]"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 8V12M12 16H12.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <p class="mt-2 text-[13px] md:text-[14px] text-[#666] leading-[1.6]">請於 9月30日前使用・最高可折抵 $99</p>
+        </div>
+      </div>
+      <button onclick="openModal()" class="claim-btn shrink-0 bg-[#F5F5F5] hover:bg-[#111] hover:text-white transition-all duration-200 text-[#111] font-bold text-[15px] px-6 md:px-8 py-3 rounded-full min-w-[88px] whitespace-nowrap" style="writing-mode: horizontal-tb; white-space: nowrap;">
+        領取
+      </button>
+    </div>
+
+    <!-- How to use -->
+    <div class="bg-white/60 rounded-[20px] p-6 md:p-8 border border-black/[0.04]">
+      <h3 class="font-bold text-[16px] text-[#111] mb-5">怎麼算？</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-[#111] text-white rounded-full px-5 py-3 text-[14px] font-medium flex items-center justify-center text-center">70% 滿 $99 折 $30 等於約 7 折</div>
+        <div class="bg-[#111] text-white rounded-full px-5 py-3 text-[14px] font-medium flex items-center justify-center text-center">50% 滿 $199 折 $99 等於 5 折</div>
+      </div>
+      <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+        <div><div class="w-10 h-10 bg-white rounded-full mx-auto flex items-center justify-center mb-2 shadow-sm">①</div><p class="text-[12px] text-[#666]">點擊領取</p></div>
+        <div><div class="w-10 h-10 bg-white rounded-full mx-auto flex items-center justify-center mb-2 shadow-sm">②</div><p class="text-[12px] text-[#666]">確認資格</p></div>
+        <div><div class="w-10 h-10 bg-white rounded-full mx-auto flex items-center justify-center mb-2 shadow-sm">③</div><p class="text-[12px] text-[#666]">下單即折</p></div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="border-t border-black/[0.06] mt-8 py-6 px-4">
+  <div class="max-w-[720px] mx-auto flex justify-between items-center">
+    <p class="text-[12px] text-[#999]">© Uber Eats優惠 • 限時外送專案</p>
+    <p class="text-[12px] text-[#999]">Made for 9月檔期</p>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div id="modalOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-[2px] hidden items-center justify-center z-50 p-4" onclick="if(event.target===this) closeModal()">
+  <div class="modal-animate bg-white rounded-[20px] w-full max-w-[480px] p-7 md:p-8 shadow-2xl relative">
+    <button onclick="closeModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-[#F5F5F5] flex items-center justify-center hover:bg-[#eee] transition">✕</button>
+    <h2 class="text-[20px] font-black text-[#111] mb-5">詳細資訊</h2>
+    <div class="space-y-3 text-[14px] text-[#444] leading-[1.7]">
+      <p>適用於外送和自取打單，數量有限，兌完為止</p>
+      <p>酒類飲品或其他管制商品可能不符合獲得此優惠的資格</p>
+      <p>其他當地費用/稅金仍可能適用</p>
+      <div class="mt-4 bg-[#FEF2F2] border border-[#FECACA] rounded-[12px] p-4">
+        <p class="text-[17px] font-bold text-[#DC2626] leading-[1.6]">本次活動需確認是否首次參與，注意事項以Uber Eats說明為準</p>
+      </div>
+    </div>
+    <button onclick="goToLine()" class="mt-7 w-full bg-[#111] hover:bg-black text-white font-bold text-[15px] py-4 rounded-full transition-all flex items-center justify-center gap-2">
+      立即領取 <span>→</span>
+    </button>
+  </div>
+</div>
+
+<script>
+function openModal(){ document.getElementById('modalOverlay').classList.remove('hidden'); document.getElementById('modalOverlay').classList.add('flex'); document.body.style.overflow='hidden'; }
+function closeModal(){ document.getElementById('modalOverlay').classList.add('hidden'); document.getElementById('modalOverlay').classList.remove('flex'); document.body.style.overflow=''; }
+function goToLine(){ window.open('https://lin.ee/9bwXrspr', '_blank'); }
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
+</script>
+</body>
+</html>
